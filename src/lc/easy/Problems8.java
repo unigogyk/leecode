@@ -73,6 +73,7 @@ public class Problems8 {
 		System.out.println(myAtoi("-2147483648"));
 		System.out.println(myAtoi("2147483d23"));
 		System.out.println(myAtoi("   2147483"));
+		System.out.println(myAtoi("172737473454x"));
 	}
 
 }
