@@ -4,6 +4,8 @@ package lc.easy;
  * problem226:
 Invert Binary Tree
 
+Solution:
+https://leetcode.com/articles/invert-binary-tree/
  */
 public class Problems226 {
 
