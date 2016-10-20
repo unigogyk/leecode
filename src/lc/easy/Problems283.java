@@ -10,11 +10,15 @@ For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums sh
 Note:
 	1. You must do this in-place without making a copy of the array.
 	2. Minimize the total number of operations.
+	
+Solution:
+https://leetcode.com/articles/move-zeroes/
+
  */
 public class Problems283 {
 
 	public void moveZeroes(int[] nums) {
-		int zeroCounts = 0;
+		int zeroCounts = 0;	//统计0的个数
 		int i = 0;
 		int j = 0;
 
@@ -29,6 +33,7 @@ public class Problems283 {
 			}
 		}
 
+		//j之前的数都不是0，j之后有zeroCounts个0
 		for (int k = j; k < nums.length; k++) {
 			nums[k] = 0;
 		}
