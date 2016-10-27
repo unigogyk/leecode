@@ -1,5 +1,6 @@
 package lc.easy;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -71,23 +72,49 @@ public class Problems349 {
 	
 	
 	public int[] intersection3(int[] nums1, int[] nums2) {
+		Arrays.sort(nums1);
+		Arrays.sort(nums2);
 		
-		return null;
-	}
-	
-	//快排
-	public void fastSort(int[] num){
 		int i = 0;
-		int j = num.length-1;
+		int j = 0;
+		Set<Integer> set = new HashSet<Integer>();
 		
-		while(){
+		while(i<nums1.length && j<nums2.length){
+			while(i+1<nums1.length){
+				if(nums1[i] == nums1[i+1])
+					i++;
+			}
 			
+			while(j+1<nums1.length){
+				if(nums2[j] == nums2[j+1])
+					j++;
+			}
+			
+			if(nums1[i] == nums2[j]){
+				set.add(nums1[i]);
+			}
+			i++;
+			j++;
 		}
 		
+		int[] result = new int[set.size()];
+		int k = 0;
+		for(Integer t : set){
+			result[k] = t;
+			k++;
+		}
+			
+		return result;
 	}
+	
+	
 
 	public static void main(String[] args) {
-
+		int[] a = new int[]{1,4,3,8,9};
+		Arrays.sort(a);
+		
+		for(int i : a)
+			System.out.print(i + " ");
 	}
 
 }
